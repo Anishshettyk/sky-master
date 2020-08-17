@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Oleo+Script&display=swap');
+
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+
+    color: var(--on-background);
+    background-color: var(--background);
+}
+
+a {
+
+    text-decoration: none;
+}
+
+a:hover {
+
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Oleo Script', cursive;
+}
+
+:root {
+    --primary-color: rgb(255, 92, 92);
+    --primary-variant: #ff2d2d;
+    --secondary-color: #1b9999;
+    --on-primary: rgb(250, 250, 250);
+    --on-background: rgb(66, 66, 66);
+    --on-background-alt: rgba(66, 66, 66, 0.7);
+    --background: rgb(255, 255, 255);
+    --box-shadow: 0 5px 20px 1px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] {
+    --primary-color: rgb(150, 65, 255);
+    --primary-variant: #6c63ff;
+    --secondary-color: #03dac5;
+    --on-primary: #000;
+    --on-background: rgba(255, 255, 255, 0.9);
+    --on-background-alt: rgba(255, 255, 255, 0.7);
+    --background: #121212;
+}
+
+/*--------------------------------------------------------------
+# scroll bar
+--------------------------------------------------------------*/
+body::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 10px;
+}
+
+/*--------------------------------------------------------------
+# theme switch style
+--------------------------------------------------------------*/
+
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+
+    right: 25px;
+    top: 30px;
+}
+
+.theme-switch-wrapper span {
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+.toggle-text {
+    position: relative;
+    top: -4px;
+    right: 5px;
+    color: var(--on-background);
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    background: var(--primary-color);
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.4s;
+}
+
+.slider::before {
+    background: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: 0.4s;
+    width: 26px;
+}
+
+input:checked+.slider {
+    background: var(--primary-color);
+}
+
+input:checked+.slider::before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round::before {
+    border-radius: 50%;
+}
+
+.fas {
+    font-size: 30px;
+    margin-right: 5px;
+}
+
+/*--------------------------------------------------------------
+# header
+--------------------------------------------------------------*/
+.header {
+    background: rgb(255 255 255 / 100%);
+    padding: 10px 5px;
+}
+
+.header .logo span {
+    color: var(--primary-variant);
+}
+
+.header .logo span strong {
+    color: var(--secondary-color);
+}
