@@ -162,10 +162,22 @@ input:checked+.slider::before {
     padding: 10px 5px;
 }
 
+.logo {
+    font-size: 2rem;
+}
+
 .header .logo span {
     color: var(--primary-variant);
 }
 
 .header .logo span strong {
     color: var(--secondary-color);
+}
+
+
+/*--------------------------------------------------------------
+# media query
+--------------------------------------------------------------*/
+@media screen and (max-width()){
+    
 }

@@ -9,15 +9,13 @@ const nav = document.getElementById('header');
 //dark mode
 function darkMode() {
     nav.style.background = 'rgb(0 0 0 / 100%)';
-    toggleIcon.children[0].textContent = 'Dark mode';
-    toggleIcon.children[1].classList.replace('fa-sun', 'fa-moon');
+    toggleIcon.children[0].classList.replace('fa-sun', 'fa-moon');
 }
 
 //light mode
 function lightMode() {
     nav.style.background = 'rgb(255 255 255 / 100%)';
-    toggleIcon.children[0].textContent = 'Light mode';
-    toggleIcon.children[1].classList.replace('fa-moon', 'fa-sun');
+    toggleIcon.children[0].classList.replace('fa-moon', 'fa-sun');
 
 }
 //switch theme
