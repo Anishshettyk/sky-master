@@ -325,7 +325,7 @@ footer .social-links a i {
 # report
 --------------------------------------------------------------*/
 .report {
-  padding: 20px 0;
+  padding: 100px 0 20px 0;
 }
 
 .inputs {
@@ -433,6 +433,16 @@ footer .social-links a i {
   justify-content: center;
   flex-direction: column;
   border-radius: 10px;
+}
+
+.non-ess-item h4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  text-align: center;
+}
+
+.noness-val {
+  font-size: 26px;
 }
 
 /*--------------------------------------------------------------

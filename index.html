@@ -48,7 +48,7 @@
     </header>
 
     <section class="hero d-flex align-items-center img-fluid" id="hero">
-      <div class="container" data-aos="fade-left" data-aos-delay="100">
+      <div class="container">
         <div class="row">
           <div class="col-lg-6 hero-content">
             <div>
@@ -83,12 +83,17 @@
         class="row reportdata d-flex align-items-center justify-content-evenly"
       >
         <div class="ess col-lg-3" id="ess">
-          <img src="/images/icons/haze.png" alt="" class="ess-img" />
+          <img
+            src="/images/icons/thunder.png"
+            alt=""
+            class="ess-img"
+            id="ess-img"
+          />
           <h2 class="ess-head" id="ess-head">it's a lovely day</h2>
-          <h1 class="ess-temp" id="ess-temp">0</h1>
-          <h5 class="ess-temp-type" id="ess-temp-type">celsius</h5>
+          <h1 class="ess-temp" id="ess-temp">0 <span>&#176;</span> C</h1>
+
           <p class="ess-loc" id="ess-loc">location</p>
-          <p class="ess-date" id="ess-date">date</p>
+          <p class="ess-date" id="ess-date"></p>
         </div>
 
         <div class="non-ess col-lg-7" id="non-ess">
@@ -96,17 +101,17 @@
             <div class="col-md-2 non-ess-item">
               <img src="/images/icons/sun.png" alt="" class="non-ess-img" />
               <h4>max</h4>
-              <h1 class="noness-val" id="max-value"></h1>
+              <h1 class="noness-val" id="max"></h1>
             </div>
             <div class="col-md-2 non-ess-item">
               <img src="/images/icons/climate.png" alt="" class="non-ess-img" />
               <h4>min</h4>
-              <h1 class="noness-val" id="max-value"></h1>
+              <h1 class="noness-val" id="min"></h1>
             </div>
             <div class="col-md-2 non-ess-item">
               <img src="/images/icons/water.png" alt="" class="non-ess-img" />
               <h4>humidity</h4>
-              <h1 class="noness-val" id="max-value"></h1>
+              <h1 class="noness-val" id="humidity"></h1>
             </div>
             <div class="col-md-2 non-ess-item">
               <img
@@ -115,7 +120,7 @@
                 class="non-ess-img"
               />
               <h4>wind speed</h4>
-              <h1 class="noness-val" id="max-value"></h1>
+              <h1 class="noness-val" id="wind-speed"></h1>
             </div>
             <div class="col-md-2 non-ess-item">
               <img
@@ -124,7 +129,7 @@
                 class="non-ess-img"
               />
               <h4>pressure</h4>
-              <h1 class="noness-val" id="max-value"></h1>
+              <h1 class="noness-val" id="pressure"></h1>
             </div>
           </div>
         </div>
