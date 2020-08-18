@@ -1,6 +1,7 @@
 const toggleSwitch = document.querySelector('input[type="checkbox"]');
 const toggleIcon = document.getElementById('toggle-icon');
 const nav = document.getElementById('header');
+const heroImg = document.getElementById('hero-img');
 
 
 
@@ -10,12 +11,14 @@ const nav = document.getElementById('header');
 function darkMode() {
     nav.style.background = 'rgb(0 0 0 / 100%)';
     toggleIcon.children[0].classList.replace('fa-sun', 'fa-moon');
+    heroImg.src = './images/hero/hero-dark.svg';
 }
 
 //light mode
 function lightMode() {
     nav.style.background = 'rgb(255 255 255 / 100%)';
     toggleIcon.children[0].classList.replace('fa-moon', 'fa-sun');
+    heroImg.src = './images/hero/hero-light.svg';
 
 }
 //switch theme
@@ -48,3 +51,33 @@ if (currentTheme) {
         lightMode();
     }
 }
+
+!(function ($) {
+    "use strict";
+    //Init AOS
+
+    function aos_init() {
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    }
+    $(window).on('load', function () {
+        aos_init();
+    });
+})(jQuery);
+
+//weather report
+const weatherStat = document.getElementById('weather-stat');
+const placeInfoImg = document.getElementById('place-info-img');
+
+async function weatherReport() {
+    const apiurl = `http://api.weatherstack.com/current?access_key=e56d03fe39377be8dc40e4590cee8f99&query=puttur`;
+    const repsonse = await fetch(apiurl);
+    const data = await repsonse.json();
+    console.log(data);
+
+    weatherStat.innerText = data.current.weather_descriptions[0];
+    placeInfoImg.src = data.current.weather_icons[0];
+}
+weatherReport();
